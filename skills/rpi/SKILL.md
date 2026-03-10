@@ -53,7 +53,12 @@ sub-agents. Read the relevant agent file when you need to spawn that sub-agent.
 
 3. Wait for the sub-agent to complete. Its entire text response is your
    **implementation-plan** document. Hold it in memory — do not write it to a file.
-4. Briefly summarise to the user: "✅ Plan complete — N steps identified."
+4. Present the full plan to the user — output the entire implementation-plan text verbatim.
+5. Ask the user: *"Does this plan look right? Reply **'proceed'** to start implementation,
+   or describe any changes you'd like."*
+6. If the user requests changes: update the implementation-plan in memory to reflect their
+   feedback, show them the revised plan, and ask again.
+7. Only move to Phase 3 once the user explicitly says **'proceed'** (or equivalent approval).
 
 ---
 

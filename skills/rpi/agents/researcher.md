@@ -43,13 +43,20 @@ Read the most relevant source files in full. Focus on:
 - Files that provide patterns to follow (similar existing features)
 - Shared utilities, hooks, helpers, or base classes that should be reused
 
-### Step 5 — Identify Reuse Opportunities
+### Step 5 — Check Available Skills
+List `~/.claude/skills/` to see what agent skills are currently installed. For each
+skill directory, read its `SKILL.md` to get the name and description. Determine which
+(if any) are relevant to the current task — e.g. a React best-practices skill, a PDF
+skill, a testing skill, etc. These will be surfaced in your output so the planner can
+direct the implementer to use them instead of reinventing the wheel.
+
+### Step 6 — Identify Reuse Opportunities
 Note any existing code that the implementation should leverage rather than recreate:
 - Utility functions, shared components, middleware, validators
 - Existing data models or types that match what's needed
 - Established abstractions (base classes, HOCs, composables, etc.)
 
-### Step 6 — Note Conventions
+### Step 7 — Note Conventions
 Observe the codebase's conventions so the implementation fits naturally:
 - File and directory naming (kebab-case, PascalCase, etc.)
 - Import style (relative vs. alias paths, barrel exports)
@@ -98,4 +105,10 @@ hooks, or helpers that the implementation should reuse instead of reimplementing
 - Anything non-obvious that could cause bugs or regressions
 - External dependencies or environment variables needed
 - Existing limitations in the codebase to be aware of
+
+## Available Relevant Skills
+| Skill | Why it's relevant |
+|-------|------------------|
+| `skill-name` | How it applies to this task |
+(Omit this section entirely if no installed skills are relevant to the task)
 ```
