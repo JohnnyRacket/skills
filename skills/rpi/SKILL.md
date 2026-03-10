@@ -71,8 +71,11 @@ context:
      reason during implementation (note the reason if you do)
 3. After all steps are done, run the **Testing Plan** from the implementation-plan:
    - Execute each verification step
-   - Report pass/fail for each
-4. When everything passes, report a final summary:
+   - For every failure: diagnose the root cause, fix the code, and re-run that test
+   - Keep iterating — do not stop at a failure. A failure is a signal to fix, not to stop.
+   - If the same test fails 3 times in a row despite different fixes, pause and explain
+     the blocker to the user before continuing.
+4. When **all tests pass**, report a final summary:
    - What was built
    - Files created or modified
    - Any deviations from the plan and why
@@ -86,3 +89,5 @@ context:
 - **Stay in context.** Both the code-research and implementation-plan must be passed
   forward and used — they are not optional background.
 - **Complete the work.** The implement phase runs to full completion, including tests.
+- **Never stop at a failure.** A failing test means fix and retry, not report and halt.
+  Keep iterating until every test in the Testing Plan is green.
