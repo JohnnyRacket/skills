@@ -8,13 +8,8 @@ Personal Claude agent skills repository. Structured to match [skills.sh](https:/
 bash install.sh
 ```
 
-This creates the two-layer symlink pattern that Claude Code uses:
-- `~/.agents/skills/<name>` → `skills/<name>/` (in this repo)
-- `~/.claude/skills/<name>` → `~/.agents/skills/<name>`
-
-Re-running is safe — existing links are skipped.
-
-> **Windows note:** Requires symlinks to be enabled. Enable Developer Mode in Settings, or run Git Bash as Administrator.
+This copies each skill into both `~/.agents/skills/` and `~/.claude/skills/`.
+Re-running overwrites existing copies, so your changes stay in sync.
 
 ## Install from GitHub
 
