@@ -1,3 +1,14 @@
+---
+name: roguelike-planner
+description: >
+  Interactive roguelike-style planning skill. Use when the user wants to plan
+  anything interactively — tech stacks, team offsites, vacations, product
+  roadmaps, home renovations, or any scenario involving a sequence of choices.
+  Trigger on: "help me plan", "help me decide", "let's plan a", "I need to
+  figure out my", "what should I pick for", "roguelike planner", "card planning".
+user-invocable: true
+---
+
 # roguelike-planner
 
 ## Trigger
